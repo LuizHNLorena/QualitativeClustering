@@ -17,14 +17,11 @@ to compile it on Linux or [Setting up CPLEX on Windows](https://www.ibm.com/supp
 [ILP.h](ILP.h)  Example usage 
 -------------
 
-[ILP.h](ILP.h) 
-
-`ILP` class provides the class 
+[ILP.h](ILP.h) provides the class 
 
 ```c++
 ILP(std::string dataset, int threshold = 0)
 ```
-
 where 
  - `dataset` - name of the input dataset file
  - `threshold` - threshold value used to translate the similarity matrix
