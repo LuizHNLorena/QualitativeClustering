@@ -3,6 +3,8 @@ Qualitative Data Clustering via Integer Linear Programming
 
 [ILP.h](ILP.h)
 
+You can create LP ([CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html)) 
+
 The following 
 
 Installation
@@ -40,7 +42,7 @@ Groups = 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3
 ```
 
 
-You can create LP ([CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html)) 
+
 
 Example usage
 -------------
