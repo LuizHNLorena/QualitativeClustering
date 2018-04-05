@@ -8,7 +8,9 @@ The following
 Installation
 ------------
 
-only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), `unistd.h` system header on unix and `windows.h` & `io.h` system headers on windows based systems. In other words, you don't need any 3rd party dependencies.
+[ILP.h](ILP.h) 
+
+[LPCreator.h](LPCreator.h) only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies.
 
 
 Example usage
@@ -32,6 +34,8 @@ You can create LP ([CPLEX LP format](https://www.ibm.com/support/knowledgecenter
 
 Example usage
 -------------
+
+[LPCreator.h](LPCreator.h) is a single header-only library. 
 
 ```c++
 #include "LPCreator.h"
