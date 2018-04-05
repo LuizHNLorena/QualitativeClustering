@@ -13,7 +13,7 @@ Installation
 [ILP.h](ILP.h) 
 
 
-Example usage
+[ILP.h](ILP.h)  Example usage 
 -------------
 
 ```c++
