@@ -7,7 +7,7 @@ ILOSTLBEGIN
 #include <vector>
 #include <fstream>
 #include <sstream>
-namespace QualitativeClustering {
+namespace qualitativeclustering {
 
 	class Solution {
 	public:
