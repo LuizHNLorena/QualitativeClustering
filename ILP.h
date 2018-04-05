@@ -18,7 +18,21 @@ namespace qualitativeclustering {
 		std::vector<int> groups;
 		std::vector<std::vector<int>> solutionMatrix;
 		Solution() {}
+	
+		friend ostream& operator<<(ostream& output, const Solution& s);
 	};
+
+	std::ostream& operator<<(std::ostream& stream, Solution const& s)
+	{
+		stream << "Objective = "   << s.objective << std::endl
+			   << "Constraints = " << s.totalConstraints  << std::endl
+			   << "Time Solve = "  << s.timeSolve << std::endl
+			   << "Groups = ";
+		for (auto g : s.groups) {
+			stream << g << " ";
+		}
+		return stream;
+	}
 
 	class ILP {
 	public:
