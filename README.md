@@ -12,6 +12,7 @@ Installation
 
 [ILP.h](ILP.h) 
 
+[LPCreator.h](LPCreator.h) is a single header-only library. Only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies.
 
 [ILP.h](ILP.h)  Example usage 
 -------------
@@ -38,13 +39,8 @@ Time Solve = 0.446455
 Groups = 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3
 ```
 
-
-
-
-Example usage
+[LPCreator.h](LPCreator.h) Example usage
 -------------
-
-[LPCreator.h](LPCreator.h) is a single header-only library. Only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies.
 
 ```c++
 #include "LPCreator.h"
