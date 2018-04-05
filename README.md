@@ -1,5 +1,5 @@
 # Qualitative Clustering via Integer Linear Programming
-Qualitative Clustering via Integer Linear Programming
+Qualitative Data Clustering via Integer Linear Programming
 
 [ILP.h](ILP.h)
 
