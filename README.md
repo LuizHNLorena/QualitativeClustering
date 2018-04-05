@@ -55,12 +55,12 @@ Groups = 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3
 void createLP(std::string dataset, std::string LPfilename, int modelType, int threshold=0)
 ```
 where 
- - `dataset` - is the name of dataset file
- - `LPfilename` - is the name of the LP file the model will be saved
+ - `dataset` - name of the input dataset file
+ - `LPfilename` - name of the output LP file
  - `modeltype` - type of model to create (0-GM,1-GM1,2-GM2,3-GM3)
- - `threshold` - a threshold value used to translate the similarity matrix
+ - `threshold` - threshold value used to translate the similarity matrix
 
-The following code excerpt shows how to create an LP file that represents the complete model (GM) for the dataset [1-Lenses.txt](data/1-Lenses.txt)
+The following code excerpt shows how to create an LP file that represents the complete model (GM) for the dataset [1-Lenses.txt](data/1-Lenses.txt):
 
 ```c++
 #include "LPCreator.h"
@@ -70,8 +70,7 @@ using namespace qualitativeclustering;
 
 int main()
 {
-    // Create GM model for dataset "1-Lenses.txt" in LP format
-    createLP("data/1-Lenses.txt", "1-Lenses-GM.lp", 0);
+    createLP("data/1-Lenses.txt", "1-Lenses-GM.lp", 0, 0);
 }
 ```
 The output will be a file in [CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html) that can be used on any compatible solver. 
