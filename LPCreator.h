@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
-namespace QualitativeClustering {
+namespace qualitativeclustering {
 	void createLP(std::string dataset, std::string LPfilename, int modelType, int threshold=0) {
 		
 		int n, m;
