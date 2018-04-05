@@ -31,6 +31,15 @@ int main()
 }
 ```
 
+The output will be
+```
+Objective = 72
+Constraints = 6072
+Time Solve = 0.446455
+Groups = 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3
+```
+
+
 You can create LP ([CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html)) 
 
 Example usage
