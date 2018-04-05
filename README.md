@@ -23,7 +23,7 @@ to compile it on Linux or [Setting up CPLEX on Windows](https://www.ibm.com/supp
  - `2` - Runs the technique (GM2)
  - `3` - Runs the technique (GM3)
  
- The following code excerpt shows how to run the complete model (GM) on the dataset `1-Lenses.txt`
+ The following code excerpt shows how to run the complete model (GM) on the dataset [1-Lenses.txt](data/1-Lenses.txt)
 
 ```c++
 #include "ILP.h"
