@@ -49,6 +49,33 @@ Groups = 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3
 [LPCreator.h](LPCreator.h) Example usage
 -------------
 
+[LPCreator.h](LPCreator.h) provides a method
+
+```cpp
+void createLP(std::string dataset, std::string LPfilename, int modelType, int threshold=0)
+```
+
+
+| Code | Linux/Win/Others | Old Win
+| ---- | --------- | ------ |
+| `rang::style::bold`      | yes   | yes   |
+| `rang::style::dim`       | yes   | no    |
+| `rang::style::italic`    | yes   | no    |
+| `rang::style::underline` | yes   | maybe |
+| `rang::style::blink`     | no    | maybe |
+| `rang::style::rblink`    | no    | no    |
+| `rang::style::reversed`  | yes   | yes   |
+| `rang::style::conceal`   | maybe | yes   |
+| `rang::style::crossed`   | yes   | no    |
+
+`ILP` class has a method `execute` that receives as parameter the type of preprocessing technique you wish to run:
+ - `0` - Runs the complete model (GM) without any preprocessing technique
+ - `1` - Runs the technique (GM1)
+ - `2` - Runs the technique (GM2)
+ - `3` - Runs the technique (GM3)
+
+The following code excerpt shows how to create an LP file that represents the complete model (GM) for the dataset [1-Lenses.txt](data/1-Lenses.txt)
+
 ```c++
 #include "LPCreator.h"
 
