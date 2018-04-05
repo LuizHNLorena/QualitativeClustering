@@ -2,14 +2,9 @@
 
 This repository presents the C++ implementation of the preprocessing techniques presented in the article _"A new preprocessing technique for ILP qualitative data clustering"_. Two header libraries are avaiable:
 
-* [ILP.h](ILP.h): 
+* [ILP.h](ILP.h): creates the ILP models and run on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/)
 
-* [LPCreator.h](LPCreator.h):
-
-
-You can create LP ([CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html)) 
-
-The following 
+* [LPCreator.h](LPCreator.h): creates the ILP models on [CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html), so it can be run on any compatible solver.
 
 Installation
 ------------
