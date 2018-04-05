@@ -17,7 +17,19 @@ to compile it on Linux or [Setting up CPLEX on Windows](https://www.ibm.com/supp
 [ILP.h](ILP.h)  Example usage 
 -------------
 
-`ILP` class has a method `execute` that receives as parameter the type of preprocessing technique you wish to run:
+[ILP.h](ILP.h) 
+
+`ILP` class provides the class 
+
+```c++
+ILP(std::string dataset, int threshold = 0)
+```
+
+where 
+ - `dataset` - name of the input dataset file
+ - `threshold` - threshold value used to translate the similarity matrix
+
+`ILP` class has a method `ILP::execute` that receives as parameter the type of preprocessing technique you wish to run:
  - `0` - Runs the complete model (GM) without any preprocessing technique
  - `1` - Runs the technique (GM1)
  - `2` - Runs the technique (GM2)
