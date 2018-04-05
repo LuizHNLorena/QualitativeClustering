@@ -26,8 +26,7 @@ int main()
 {
     // Run ILP for GM model
     ILP ilp("data/1-Lenses.txt");
-    s = ilp.execute(0);
-    cout << s;
+    cout << ilp.execute(0);
 }
 ```
 
