@@ -17,6 +17,12 @@ to compile it on Linux or [Setting up CPLEX on Windows](https://www.ibm.com/supp
 [ILP.h](ILP.h)  Example usage 
 -------------
 
+`ILP` class has a method `execute` that receives as parameter the type of preprocessing technique you wish to run:
+ - `0` - Runs the complete model (GM) without any preprocessing technique
+ - `1` - Runs the technique (GM1)
+ - `2` - Runs the technique (GM2)
+ - `3` - Runs the technique (GM3)
+
 ```c++
 #include "ILP.h"
 
