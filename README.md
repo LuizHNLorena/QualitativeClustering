@@ -45,17 +45,7 @@ using namespace qualitativeclustering;
 
 int main()
 {
-    // Create GM model in LP format
+    // Create GM model for dataset "1-Lenses.txt" in LP format
     createLP("data/1-Lenses.txt", "1-Lenses-GM.lp", 0);
-    
-    // Create GM1 model in LP format
-    createLP("data/1-Lenses.txt", "1-Lenses-GM1.lp", 1);
-    
-    // Create GM2 model in LP format
-    createLP("data/1-Lenses.txt", "1-Lenses-GM2.lp", 2);
-    
-    // Create GM3 model in LP format
-    createLP("data/1-Lenses.txt", "1-Lenses-GM3.lp", 3);
-    
 }
 ```
