@@ -24,9 +24,10 @@ using namespace qualitativeclustering;
 
 int main()
 {
-    cout << "Plain old text"
-         << style::bold << "Rang styled text!!"
-         << style::reset << endl;
+    // Run ILP for GM model
+    ILP ilp("datasets/1-Lenses.txt");
+	s = ilp.execute(0);
+	cout << s;
 }
 ```
 
