@@ -1,7 +1,11 @@
 # Qualitative Clustering via Integer Linear Programming
-Qualitative Data Clustering via Integer Linear Programming
 
-[ILP.h](ILP.h)
+This repository presents the C++ implementation of the preprocessing techniques presented in the article _"A new preprocessing technique for ILP qualitative data clustering"_. Two header libraries are avaiable:
+
+* [ILP.h](ILP.h): 
+
+* [LPCreator.h](LPCreator.h):
+
 
 You can create LP ([CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html)) 
 
