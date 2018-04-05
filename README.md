@@ -33,7 +33,6 @@ using namespace qualitativeclustering;
 
 int main()
 {
-    // Run ILP for GM model
     ILP ilp("data/1-Lenses.txt");
     cout << ilp.execute(0);
 }
