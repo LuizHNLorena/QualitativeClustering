@@ -1,10 +1,14 @@
 # Qualitative Clustering via Integer Linear Programming
 Qualitative Clustering via Integer Linear Programming
 
-
+[ILP.h](ILP.h)
 
 The following 
 
+Installation
+------------
+
+only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), `unistd.h` system header on unix and `windows.h` & `io.h` system headers on windows based systems. In other words, you don't need any 3rd party dependencies.
 
 
 Example usage
