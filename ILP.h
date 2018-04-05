@@ -31,6 +31,7 @@ namespace qualitativeclustering {
 		for (auto g : s.groups) {
 			stream << g << " ";
 		}
+		stream << endl;
 		return stream;
 	}
 
