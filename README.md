@@ -66,7 +66,11 @@ void createLP(std::string dataset, std::string LPfilename, int modelType, int th
 where 
  - `dataset` - name of the input dataset file
  - `LPfilename` - name of the output LP file
- - `modeltype` - type of model to create (0-GM,1-GM1,2-GM2,3-GM3)
+ - `modeltype` - type of model to create:
+   - `0` - Runs the complete model (GM) without any preprocessing technique
+   - `1` - Runs the technique (GM1)
+   - `2` - Runs the technique (GM2)
+   - `3` - Runs the technique (GM3)
  - `threshold` - threshold value used to translate the similarity matrix
 
 The following code excerpt shows how to create an LP file that represents the complete model (GM) for the dataset [1-Lenses.txt](data/1-Lenses.txt):
