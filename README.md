@@ -11,23 +11,27 @@ Two header libraries are avaiable:
 Installation
 ------------
 
-[ILP.h](ILP.h) depends on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/) 12>. You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
-to compile it on Linux 
+[ILP.h](ILP.h) depends on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/) 12+. 
 
+You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
+to compile it on Linux/Mac. Suppose `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile a `main.cpp` file that uses `ILP.h`: 
 
 ```
-g++ main.cpp -o main -I/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/cplex/include 
-                     -I/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/concert/include
+g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include 
+                     -I/<CPLEX_DIR>/concert/include
                      -DIL_STD 
-                     -L/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/cplex/lib/x86-64_osx/static_pic/ 
-                     -L/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/concert/lib/x86-64_osx/static_pic/ 
+                     -L/<CPLEX_DIR>/cplex/lib/x86-64_osx/static_pic/ 
+                     -L/<CPLEX_DIR>/concert/lib/x86-64_osx/static_pic/ 
                      -lilocplex -lconcert -lcplex -lm -lpthread -std=c++11
 ```
 
+The rules defined in the link [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) can be used to compile it on Windows environment.
 
-or [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) to compile it on Windows environment.
+[LPCreator.h](LPCreator.h) is a single header-only library. Only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies. To compile a `main.cpp` file that uses `LPCreator.h`:
 
-[LPCreator.h](LPCreator.h) is a single header-only library. Only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies.
+```
+g++ main.cpp -o main -std=c++11
+```
 
 [ILP.h](ILP.h)  Example usage 
 -------------
