@@ -15,7 +15,7 @@ Installation
 
 [ILP.h](ILP.h) depends on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/) 12>. 
 
-**COMPILING ON LINUX.** You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
+**COMPILING ON LINUX:** You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
 to compile it on Linux/Mac. Suppose `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile a `main.cpp` file that uses `ILP.h`: 
 
 ```
@@ -27,7 +27,7 @@ g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include
                      -lilocplex -lconcert -lcplex -lm -lpthread -std=c++11
 ```
 
-The rules defined in the link [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) can be used to compile it on Windows environment.
+**COMPILING ON WINDOWS:** The rules defined in the link [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) can be used to compile it on Windows environment.
 
 ### Compiling [LPCreator.h](LPCreator.h)
 
