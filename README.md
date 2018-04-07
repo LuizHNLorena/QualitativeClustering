@@ -16,7 +16,12 @@ to compile it on Linux
 
 
 ```
-g++ main.cpp -o main -I/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/cplex/include -I/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/concert/include -DIL_STD -L/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/cplex/lib/x86-64_osx/static_pic/ -L/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/concert/lib/x86-64_osx/static_pic/ -lilocplex -lconcert -lcplex -lm -lpthread -std=c++11
+g++ main.cpp -o main -I/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/cplex/include 
+                     -I/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/concert/include
+                     -DIL_STD 
+                     -L/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/cplex/lib/x86-64_osx/static_pic/ 
+                     -L/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/concert/lib/x86-64_osx/static_pic/ 
+                     -lilocplex -lconcert -lcplex -lm -lpthread -std=c++11
 ```
 
 
