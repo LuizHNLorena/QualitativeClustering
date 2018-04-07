@@ -11,7 +11,7 @@ Two header libraries are avaiable:
 Installation
 ------------
 
-## This is an <h2> tag
+### This is an <h2> tag
 
 [ILP.h](ILP.h) depends on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/) 12+. 
 
