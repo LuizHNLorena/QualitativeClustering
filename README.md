@@ -29,6 +29,8 @@ g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include
 
 The rules defined in the link [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) can be used to compile it on Windows environment.
 
+### To compile [LPCreator.h](LPCreator.h)
+
 [LPCreator.h](LPCreator.h) is a single header-only library. Only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies. To compile a `main.cpp` file that uses `LPCreator.h`:
 
 ```
