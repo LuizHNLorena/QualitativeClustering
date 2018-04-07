@@ -12,7 +12,15 @@ Installation
 ------------
 
 [ILP.h](ILP.h) depends on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/) 12>. You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
-to compile it on Linux or [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) to compile it on Windows environment.
+to compile it on Linux 
+
+
+```
+g++ main.cpp -o main -I/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/cplex/include -I/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/concert/include -DIL_STD -L/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/cplex/lib/x86-64_osx/static_pic/ -L/Users/Lorena/Applications/IBM/ILOG/CPLEX_Studio1271/concert/lib/x86-64_osx/static_pic/ -lilocplex -lconcert -lcplex -lm -lpthread -std=c++11
+```
+
+
+or [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) to compile it on Windows environment.
 
 [LPCreator.h](LPCreator.h) is a single header-only library. Only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies.
 
