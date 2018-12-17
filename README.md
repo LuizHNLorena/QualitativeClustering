@@ -12,8 +12,6 @@ Two header libraries are avaiable:
 * [Example usage of ILP](#example-usage-of-ilp)
 * [Example usage of LPCreator](#example-usage-of-lpcreator)
 
----
-
 ## Example usage of ILP
 
 [ILP.h](ILP.h) provides the class 
@@ -73,8 +71,6 @@ to compile it on Linux/Mac.
 
 * **Compiling on WINDOWS:** The rules defined in [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) can be used to compile it on Windows environment.
 
----
-
 ## Example usage of LPCreator
 
 [LPCreator.h](LPCreator.h) provides the method to create ILP models in LP format
@@ -112,3 +108,8 @@ The output will be a file in [CPLEX LP format](https://www.ibm.com/support/knowl
 ```
 g++ main.cpp -o main -std=c++11
 ```
+
+## License
+>You can check out the full license [here](https://github.com/LuizHNLorena/QualitativeClustering/blob/master/LICENSE)
+
+This project is licensed under the terms of the **MIT** license.
