@@ -2,6 +2,13 @@
 
 This repository presents the C++ implementation of the ILP models described in the article _"Qualitative data clustering: a new Integer Linear Programming model"_. 
 
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
+# General info
+
 Two header libraries are avaiable:
 
 * [ILP.h](ILP.h): creates and runs the ILP models on the [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/)
