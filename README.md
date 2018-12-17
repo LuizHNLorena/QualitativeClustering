@@ -108,8 +108,3 @@ The output will be a file in [CPLEX LP format](https://www.ibm.com/support/knowl
 ```
 g++ main.cpp -o main -std=c++11
 ```
-
-## License
->You can check out the full license [here](https://github.com/LuizHNLorena/QualitativeClustering/blob/master/LICENSE)
-
-This project is licensed under the terms of the **MIT** license.
