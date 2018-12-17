@@ -10,9 +10,7 @@ Two header libraries are avaiable:
 
 ## Table of contents
 * [Example usage of ILP header](#example-usage-of-ilp-header)
-* [Technologies](#technologies)
-* [Setup](#setup)
-
+* [Example usage of LPCreator header](#example-usage-of-lpcreator-header)
 
 ## Example usage of ILP header
 
@@ -75,7 +73,7 @@ to compile it on Linux/Mac.
 
 * **Compiling on WINDOWS:** The rules defined in [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) can be used to compile it on Windows environment.
 
-## Example usage of [LPCreator.h](LPCreator.h)
+## Example usage of LPCreator header
 
 [LPCreator.h](LPCreator.h) provides the method to create ILP models in LP format
 
