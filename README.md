@@ -14,7 +14,7 @@ Two header libraries are avaiable:
 * [Setup](#setup)
 
 
-## Example usage of [ILP.h](ILP.h)
+## Example usage of ILP.h
 
 [ILP.h](ILP.h) provides the class 
 
