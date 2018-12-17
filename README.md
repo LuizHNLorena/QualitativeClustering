@@ -18,7 +18,7 @@ ILP(std::string dataset)
 where 
  - `dataset` - name of the input dataset file
  
-`ILP` class has a method `ILP::execute` that receives as parameter the type of ILP model you wish to run:
+`ILP` class has a method `ILP::execute(int modelType)` that receives as parameter the type of ILP model you wish to run:
  - `0` - Runs the complete model (GM) 
  - `1` - Runs model GM1
  - `2` - Runs model GM2
