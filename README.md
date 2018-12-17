@@ -1,6 +1,6 @@
 # Qualitative Clustering via Integer Linear Programming
 
-This repository presents the C++ implementation of the preprocessing techniques described in the article _"Qualitative data clustering: a new Integer Linear Programming model"_. 
+This repository presents the C++ implementation of the ILP models described in the article _"Qualitative data clustering: a new Integer Linear Programming model"_. 
 
 Two header libraries are avaiable:
 
