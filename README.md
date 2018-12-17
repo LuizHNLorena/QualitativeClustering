@@ -1,10 +1,10 @@
 # Qualitative Clustering via Integer Linear Programming
 
-This repository presents the C++ implementation of the preprocessing techniques described in the article _"A new preprocessing technique for ILP qualitative data clustering"_. 
+This repository presents the C++ implementation of the preprocessing techniques described in the article _"Qualitative data clustering: a new Integer Linear Programming model"_. 
 
 Two header libraries are avaiable:
 
-* [ILP.h](ILP.h): creates the ILP models and run on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/)
+* [ILP.h](ILP.h): creates and runs the ILP models on the [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/)
 
 * [LPCreator.h](LPCreator.h): creates the ILP models on [CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html), so it can be run on any compatible solver.
 
@@ -16,7 +16,9 @@ Installation
 [ILP.h](ILP.h) depends on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/) 12>. 
 
 * **Compiling on LINUX/MAC:** You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
-to compile it on Linux/Mac. Suppose `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile a `main.cpp` file that uses `ILP.h`: 
+to compile it on Linux/Mac. 
+
+Suppose `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile a `main.cpp` file that uses `ILP.h`: 
 
 ```
 g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include 
@@ -31,7 +33,7 @@ g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include
 
 ### Compiling [LPCreator.h](LPCreator.h)
 
-[LPCreator.h](LPCreator.h) is a single header-only library. Only depends on [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies. To compile a `main.cpp` file that uses `LPCreator.h`:
+[LPCreator.h](LPCreator.h) is a single header-only library. It only depends on the [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies. To compile a `main.cpp` file that uses `LPCreator.h`:
 
 ```
 g++ main.cpp -o main -std=c++11
@@ -43,12 +45,11 @@ g++ main.cpp -o main -std=c++11
 [ILP.h](ILP.h) provides the class 
 
 ```c++
-ILP(std::string dataset, int threshold = 0)
+ILP(std::string dataset)
 ```
 where 
  - `dataset` - name of the input dataset file
- - `threshold` - threshold value used to translate the similarity matrix
-
+ 
 `ILP` class has a method `ILP::execute` that receives as parameter the type of preprocessing technique you wish to run:
  - `0` - Runs the complete model (GM) without any preprocessing technique
  - `1` - Runs the technique (GM1)
@@ -84,7 +85,7 @@ Groups = 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3
 [LPCreator.h](LPCreator.h) provides the method
 
 ```cpp
-void createLP(std::string dataset, std::string LPfilename, int modelType, int threshold=0)
+void createLP(std::string dataset, std::string LPfilename, int modelType)
 ```
 where 
  - `dataset` - name of the input dataset file
@@ -94,7 +95,6 @@ where
    - `1` - Runs the technique (GM1)
    - `2` - Runs the technique (GM2)
    - `3` - Runs the technique (GM3)
- - `threshold` - threshold value used to translate the similarity matrix
 
 The following code excerpt shows how to create an LP file that represents the complete model (GM) for the dataset [1-Lenses.txt](data/1-Lenses.txt):
 
