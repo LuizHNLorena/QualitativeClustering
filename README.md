@@ -4,7 +4,8 @@ This repository presents the C++ implementation of the ILP models described in t
 
 ## Table of contents
 * [General info](#general-info)
-* [Installation](#install)
+* [Example usage](#example-usage)
+* [Installation](#installation)
 * [Setup](#setup)
 
 ## General info
@@ -15,8 +16,9 @@ Two header libraries are avaiable:
 
 * [LPCreator.h](LPCreator.h): creates the ILP models on [CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html), so it can be run on any compatible solver.
 
+## Example usage
+
 ## Installation
-------------
 
 ### Compiling [ILP.h](ILP.h)
 
