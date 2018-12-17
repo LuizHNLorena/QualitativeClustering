@@ -9,7 +9,7 @@ Two header libraries are avaiable:
 * [LPCreator.h](LPCreator.h): creates the ILP models on [CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html), so it can be run on any compatible solver.
 
 ## Table of contents
-* [Example usage of [ILP.h](ILP.h)](#general-info)
+* [Example usage of ILP.h](#example-usage-of-ilp.h)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
