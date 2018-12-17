@@ -16,9 +16,7 @@ Installation
 [ILP.h](ILP.h) depends on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/) 12>. 
 
 * **Compiling on LINUX/MAC:** You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
-to compile it on Linux/Mac. 
-
-Suppose `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile a `main.cpp` file that uses `ILP.h`: 
+to compile it on Linux/Mac. Let's suppose you are on Mac and `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile a `main.cpp` file that uses `ILP.h`: 
 
 ```
 g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include 
@@ -50,11 +48,11 @@ ILP(std::string dataset)
 where 
  - `dataset` - name of the input dataset file
  
-`ILP` class has a method `ILP::execute` that receives as parameter the type of preprocessing technique you wish to run:
- - `0` - Runs the complete model (GM) without any preprocessing technique
- - `1` - Runs the technique (GM1)
- - `2` - Runs the technique (GM2)
- - `3` - Runs the technique (GM3)
+`ILP` class has a method `ILP::execute` that receives as parameter the type of ILP model you wish to run:
+ - `0` - Runs the complete model (GM) 
+ - `1` - Runs model GM1
+ - `2` - Runs model GM2
+ - `3` - Runs model GM3
  
  The following code excerpt shows how to run the complete model (GM) on the dataset [1-Lenses.txt](data/1-Lenses.txt)
 
@@ -82,7 +80,7 @@ Groups = 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3
 [LPCreator.h](LPCreator.h) Example usage
 -------------
 
-[LPCreator.h](LPCreator.h) provides the method
+[LPCreator.h](LPCreator.h) provides the method to create ILP models in LP format
 
 ```cpp
 void createLP(std::string dataset, std::string LPfilename, int modelType)
@@ -91,10 +89,10 @@ where
  - `dataset` - name of the input dataset file
  - `LPfilename` - name of the output LP file
  - `modeltype` - type of model to create:
-   - `0` - Runs the complete model (GM) without any preprocessing technique
-   - `1` - Runs the technique (GM1)
-   - `2` - Runs the technique (GM2)
-   - `3` - Runs the technique (GM3)
+   - `0` - Create the complete model (GM)
+   - `1` - Create GM1 model
+   - `2` - Create GM2 model
+   - `3` - Create GM3 model
 
 The following code excerpt shows how to create an LP file that represents the complete model (GM) for the dataset [1-Lenses.txt](data/1-Lenses.txt):
 
