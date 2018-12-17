@@ -103,7 +103,7 @@ int main()
 The output will be a file in [CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html) that can be used on any compatible solver. 
 
 
-[LPCreator.h](LPCreator.h) is a single header-only library. It only depends on the [C++ standard library](http://en.cppreference.com/w/cpp/header), you don't need any 3rd party dependencies. Hence, to compile this code excerpt:
+[LPCreator.h](LPCreator.h) is a single header-only library. Hence, to compile this code excerpt just type on Linux/Mac:
 
 ```
 g++ main.cpp -o main -std=c++11
