@@ -18,7 +18,23 @@ Two header libraries are avaiable:
 
 ## Example usage
 
-### [ILP.h](ILP.h)
+### Using [ILP.h](ILP.h)
+
+[ILP.h](ILP.h) provides the class 
+
+```c++
+ILP(std::string dataset)
+```
+where 
+ - `dataset` - name of the input dataset file
+ 
+`ILP` class has a method `ILP::execute` that receives as parameter the type of ILP model you wish to run:
+ - `0` - Runs the complete model (GM) 
+ - `1` - Runs model GM1
+ - `2` - Runs model GM2
+ - `3` - Runs model GM3
+ 
+ The following code excerpt shows how to run the complete model (GM) on the dataset [1-Lenses.txt](data/1-Lenses.txt)
 
 ```c++
 #include "ILP.h"
@@ -40,24 +56,6 @@ Constraints = 6072
 Time Solve = 0.446455
 Groups = 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3
 ```
-
-### [ILP.h](ILP.h) Documentation
-
-[ILP.h](ILP.h) provides the class 
-
-```c++
-ILP(std::string dataset)
-```
-where 
- - `dataset` - name of the input dataset file
- 
-`ILP` class has a method `ILP::execute` that receives as parameter the type of ILP model you wish to run:
- - `0` - Runs the complete model (GM) 
- - `1` - Runs model GM1
- - `2` - Runs model GM2
- - `3` - Runs model GM3
- 
- The following code excerpt shows how to run the complete model (GM) on the dataset [1-Lenses.txt](data/1-Lenses.txt)
 
 ### Compiling [ILP.h](ILP.h)
 
