@@ -55,7 +55,7 @@ You must have [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/op
 
 Let's suppose you are on Mac and `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile this example: 
 
-```
+```bash
 g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include 
                      -I/<CPLEX_DIR>/concert/include
                      -DIL_STD 
@@ -64,7 +64,7 @@ g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include
                      -lilocplex -lconcert -lcplex -lm -lpthread -std=c++11
 ```
 
-For more information regarding settiing up CPLEX on Linux/Mac/Windows:
+For more information regarding setting up CPLEX on Linux/Mac/Windows:
 
 * **Compiling on LINUX/MAC:** You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
 to compile it on Linux/Mac. 
