@@ -18,14 +18,52 @@ Two header libraries are avaiable:
 
 ## Example usage
 
-## Installation
+### [ILP.h](ILP.h)
+
+```c++
+#include "ILP.h"
+
+using namespace std;
+using namespace qualitativeclustering;
+
+int main()
+{
+    ILP ilp("data/1-Lenses.txt");
+    cout << ilp.execute(0);
+}
+```
+
+The output will be
+```
+Objective = 72
+Constraints = 6072
+Time Solve = 0.446455
+Groups = 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3 0 1 0 1 2 2 3 3
+```
+
+### [ILP.h](ILP.h) Documentation
+
+[ILP.h](ILP.h) provides the class 
+
+```c++
+ILP(std::string dataset)
+```
+where 
+ - `dataset` - name of the input dataset file
+ 
+`ILP` class has a method `ILP::execute` that receives as parameter the type of ILP model you wish to run:
+ - `0` - Runs the complete model (GM) 
+ - `1` - Runs model GM1
+ - `2` - Runs model GM2
+ - `3` - Runs model GM3
+ 
+ The following code excerpt shows how to run the complete model (GM) on the dataset [1-Lenses.txt](data/1-Lenses.txt)
 
 ### Compiling [ILP.h](ILP.h)
 
 [ILP.h](ILP.h) depends on [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/optimization/cplex-optimizer/) 12>. 
 
-* **Compiling on LINUX/MAC:** You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
-to compile it on Linux/Mac. Let's suppose you are on Mac and `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile a `main.cpp` file that uses `ILP.h`: 
+Let's suppose you are on Mac and `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile a `main.cpp` file that uses `ILP.h`: 
 
 ```
 g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include 
@@ -36,7 +74,16 @@ g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include
                      -lilocplex -lconcert -lcplex -lm -lpthread -std=c++11
 ```
 
+For more information regarding settiing up CPLEX on Linux/Mac/Windows:
+
+* **Compiling on LINUX/MAC:** You can follow the rules defined in [Setting up CPLEX on GNU/Linux](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/GNU_Linux.html)
+to compile it on Linux/Mac. 
+
 * **Compiling on WINDOWS:** The rules defined in [Setting up CPLEX on Windows](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Windows.html) can be used to compile it on Windows environment.
+
+
+## Installation
+
 
 ### Compiling [LPCreator.h](LPCreator.h)
 
