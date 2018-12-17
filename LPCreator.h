@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 namespace qualitativeclustering {
-	void createLP(std::string dataset, std::string LPfilename, int modelType, int threshold=0) {
+	void createLP(std::string dataset, std::string LPfilename, int modelType) {
 		
 		int n, m;
 		std::vector<std::vector<int>>S;
@@ -56,14 +56,6 @@ namespace qualitativeclustering {
 						}
 					}
 					S[i][j] = 2 * total - (m - total_missing);
-				}
-			}
-		}
-
-		if (threshold > 0) {
-			for (int i = 0; i < n; i++) {
-				for (int j = 0; j < n; j++) {
-					S[i][j] = S[i][j] - threshold;
 				}
 			}
 		}

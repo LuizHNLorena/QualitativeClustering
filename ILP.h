@@ -66,7 +66,6 @@ namespace qualitativeclustering {
 		int totalVariables;
 		double timeSolve;
 		std::vector<int> groups;
-		std::vector<std::vector<int>> solutionMatrix;
 		Solution() {}
 	
 		friend ostream& operator<<(ostream& output, const Solution& s);
@@ -91,7 +90,7 @@ namespace qualitativeclustering {
 		int n, m;
 		std::vector<std::vector<int>>S;
 
-		ILP(std::string p, int threshold = 0) {
+		ILP(std::string p) {
 			problem = p;
 
 			std::ifstream finput;
@@ -143,14 +142,6 @@ namespace qualitativeclustering {
 					}
 				}
 			}
-
-			if (threshold > 0) {
-				for (int i = 0; i < n; i++) {
-					for (int j = 0; j < n; j++) {
-						S[i][j] = S[i][j] - threshold;
-					}
-				}
-			}
 		}
 
 		Solution execute(int modelType) {
@@ -166,8 +157,6 @@ namespace qualitativeclustering {
 				IloExpr obj(env);
 				for (int i = 0; i < n; i++) {
 					for (int j = i + 1; j < n; j++) {
-						string name = "x" + std::to_string(i) + "." + std::to_string(j);
-						x[i][j].setName(name.c_str());
 						obj += S[i][j] * x[i][j];
 					}
 				}
@@ -237,42 +226,41 @@ namespace qualitativeclustering {
 
 				timeSolve = get_wall_time() - timeSolve;
 
+				// Get solution
 				s.objective = cplex.getObjValue();
 				s.totalConstraints = cplex.getNrows();
 				s.totalVariables = cplex.getNcols();
 				s.timeSolve = timeSolve;
 
-				s.solutionMatrix.resize(n);
+				// Create solution groups
 				s.groups.resize(n, -1);
 				int	groupID = 0;
 
 				for (int i = 0; i < n; i++) {
-					s.solutionMatrix[i].resize(n, 0);
-
 					for (int j = i + 1; j < n; j++) {
-
 						try {
-							s.solutionMatrix[i][j] = abs(round(cplex.getValue(x[i][j])));
+							if (cplex.getValue(x[i][j]) > 0) {
+								if (s.groups[i] == -1 && s.groups[j] == -1) {
+									s.groups[i] = groupID;
+									s.groups[j] = groupID;
+									groupID = groupID + 1;
+								}
+								else {
+									if (s.groups[i] == -1)
+										s.groups[i] = s.groups[j];
+									else {
+										if (s.groups[j] == -1){
+											s.groups[j] = s.groups[i];
+										}
+									}
+								}
+							}
 						}
 						catch (IloException& e) {}
-
-						if (s.solutionMatrix[i][j] > 0) {
-							if (s.groups[i] == -1 && s.groups[j] == -1) {
-								s.groups[i] = groupID;
-								s.groups[j] = groupID;
-								groupID = groupID + 1;
-							}
-							else {
-								if (s.groups[i] == -1)
-									s.groups[i] = s.groups[j];
-								else
-									s.groups[j] = s.groups[i];
-							}
-						}
 					}
 				}
 
-				// Objects that remained alone create its own group
+				// Create a isolated group for each object that remained alone
 				for (int i = 0; i < n; i++) {
 					if (s.groups[i] == -1)
 						s.groups[i] = groupID++;
