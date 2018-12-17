@@ -55,7 +55,7 @@ You must have [IBM's CPLEX Optimizer™](http://www.ibm.com/software/commerce/op
 
 Let's suppose you are on Mac and `<CPLEX_DIR>` is the directory where CPLEX is installed on your system, the following command will compile this example: 
 
-```bash
+```
 g++ main.cpp -o main -I/<CPLEX_DIR>/cplex/include 
                      -I/<CPLEX_DIR>/concert/include
                      -DIL_STD 
