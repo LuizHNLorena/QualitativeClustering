@@ -97,7 +97,7 @@ using namespace qualitativeclustering;
 
 int main()
 {
-    createLP("data/1-Lenses.txt", "1-Lenses-GM.lp", 0, 0);
+    createLP("data/1-Lenses.txt", "1-Lenses-GM.lp", 0);
 }
 ```
 The output will be a file in [CPLEX LP format](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.5.0/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP.html) that can be used on any compatible solver. 
